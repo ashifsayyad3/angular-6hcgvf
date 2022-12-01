@@ -63,9 +63,13 @@ import { exportElement } from './export-element';
         <div class="chartTitle">Comments</div>
         <div class="comment-section" id="comments"></div>
       </div>
+      <div>For more information, please visit <a href="https://subsea-oculus.com/" target="_blank">www.subsea-oculus.com</a>
+</div>
     </div>
+    <span class="page-break"></span>
     <div class="row">
-          <div class="label">BOP Health Events - Past 24 hours</div>
+    <h4 class="heading">Event Manager</h4>
+    <div class="label">BOP Health Events - Past 24 hours</div>
         <div class="events" id="bopHealthEvents">
             <table
               id="bopHealthData"
@@ -243,6 +247,144 @@ import { exportElement } from './export-element';
               </tbody>
             </table>
         </div>
+
+        <div class="label">Failures - Past 24 hours</div>
+        <div class="events" id="FailuresEvents">
+            <table id="FailuresData" class="report-table table table-bordered hover">
+              <thead>
+                <tr class="tb-b">
+                  <th>ID</th>
+                  <th>Title</th>
+                  <th>NPT</th>
+                  <th>Status</th>
+                  <th>Failure Date</th>
+                  <th>Update Date</th>
+                  <th>Obv.</th>
+                  <th>SOF</th>
+                  <th>MOC</th>
+                  <th>Equipment</th>
+                  <th>Issue Type</th>
+                  <th>Failed Item</th>
+                  <th>Rig</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>                  
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>                
+              </tbody>
+            </table>
+        </div>
+
+        <div class="label">Observations - Past 24 hours</div>
+        <div class="events" id="ObservationsEvents">
+            <table id="ObservationsData" class="report-table table table-bordered hover">
+              <thead>
+                <tr class="tb-b">
+                  <th>ID</th>
+                  <th>Title</th>
+                  <th>Status</th>
+                  <th>Obsv Date</th>
+                  <th>Update Date</th>
+                  <th>Obsv Type</th>
+                  <th>Attached to Failure</th>
+                  <th>Rig</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>                
+              </tbody>
+            </table>
+        </div>
+
+        <div class="label">Communication - Past 24 hours</div>
+        <div class="events" id="CommunicationEvents">
+            <table id="CommunicationData" class="report-table table table-bordered hover">
+              <thead>
+                <tr class="tb-b">
+                  <th>ID</th>
+                  <th>Rig</th>
+                  <th>Type</th>
+                  <th>Time</th>
+                  <th>Status</th>
+                  <th>Priority</th>
+                  <th>Closed-Time</th>
+                  <th>Outage-Time</th>
+                  <th>Time of Event</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>                
+              </tbody>
+            </table>
+        </div>
     </div>
   </div>
     </div>
@@ -260,6 +402,12 @@ import { exportElement } from './export-element';
   width: 100%;
 }
 
+.heading{
+  color:#0E86D4;
+  font-weight:600;
+  width: 100%;
+  font-size:17px;
+}
 .report-title {
   margin-bottom: 10px;font-weight: bold;line-height: 1.2;font-size: 25px;color: black;
 }
@@ -296,6 +444,7 @@ th{
 .chartTitle {
   background-color: #418ddf;
   color: #fff;
+  padding-left:5px;
 }
 .table {
   width: 100%;
@@ -326,7 +475,7 @@ th{
   max-width: 66.666667%;
   position: relative;
   width: 100%;
-  margin-bottom:1em;
+  margin-bottom:2px;
   border: 1px solid #555657;
   border-right: none;
 }
@@ -336,7 +485,7 @@ th{
   max-width: 33.333333%;
   position: relative;
   width: 100%;
-  margin-bottom:1em;
+  margin-bottom:2px;
   border: 1px solid #555657;
 }
 
@@ -345,15 +494,15 @@ th{
   max-width: 100%;
   position: relative;
   width: 100%;
-  margin-bottom:2em;
+  margin-bottom:2px;
   border: 1px solid #555657;
 }
 .chart-section {
-  height: 200px;
+  height: 130px;
 }
 
 .comment-section {
-  height: 100px;
+  height: 70px;
 }
 
 .datatable-div {
