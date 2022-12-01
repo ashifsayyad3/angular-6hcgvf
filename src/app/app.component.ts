@@ -65,11 +65,8 @@ import { exportElement } from './export-element';
       </div>
     </div>
     <div class="row">
-        <div>
           <div class="label">BOP Health Events - Past 24 hours</div>
-        </div>
-        <div class="" id="bopHealthEvents">
-          <div>
+        <div class="events" id="bopHealthEvents">
             <table
               id="bopHealthData"
               class="report-table table table-bordered hover"
@@ -127,13 +124,9 @@ import { exportElement } from './export-element';
                 </tr>
               </tbody>
             </table>
-          </div>
         </div>
-        <div>
           <div class="label">Operational Events - Past 24 hours</div>
-        </div>
-        <div class="" id="operationalEvents">
-          <div>
+        <div class="events" id="operationalEvents">
             <table
               style="width: 100% !important;"
               id="operationalData"
@@ -192,13 +185,9 @@ import { exportElement } from './export-element';
                 </tr>
               </tbody>
             </table>
-          </div>
         </div>
-        <div>
           <div class="label">On Deck Events - Past 24 hours</div>
-        </div>
-        <div class="" id="onDeckEvents">
-          <div>
+        <div class="events" id="onDeckEvents">
             <table id="ondeckData" class="report-table table table-bordered hover">
               <thead>
                 <tr class="tb-b">
@@ -253,7 +242,6 @@ import { exportElement } from './export-element';
                 </tr>
               </tbody>
             </table>
-          </div>
         </div>
     </div>
   </div>
@@ -295,6 +283,9 @@ import { exportElement } from './export-element';
 }
 th{
   font-weight:400;
+}
+.events{
+  width:100%;
 }
 .event-table {
   color: black;
@@ -399,7 +390,8 @@ textarea {
 }
 .label{
   color:#0E86D4;
-  font-weight:bold;
+  font-weight:600;
+
 }
   `,
   ],
