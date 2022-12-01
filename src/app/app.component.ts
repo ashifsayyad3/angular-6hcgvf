@@ -386,7 +386,12 @@ import { exportElement } from './export-element';
             </table>
         </div>
     </div>
+    <span class="page-break"></span>
+    <div class="row">
+    <h4 class="heading">Function Status/Choke Kill & Trends</h4>
   </div>
+  </div>
+ 
     </div>
   `,
   styles: [
