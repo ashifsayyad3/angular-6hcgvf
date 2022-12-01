@@ -394,10 +394,7 @@ import { exportElement } from './export-element';
     p {
         font-size: 20px;
     }
-    h3
-{
-  border:1px solid black;
-}
+
 #aqlogo {
   width: 100%;
 }
@@ -409,7 +406,11 @@ import { exportElement } from './export-element';
   font-size:17px;
 }
 .report-title {
-  margin-bottom: 10px;font-weight: bold;line-height: 1.2;font-size: 25px;color: black;
+  margin-bottom: 10px;
+  font-weight: bold;
+  line-height: 1.2;
+  font-size: 25px;
+  color: black;
 }
 
 .tb-b {
@@ -465,7 +466,6 @@ th{
   background-color: white;
   height: auto;
   margin: 10px;
-  // text-align: center;
   padding-left: 30px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -540,7 +540,6 @@ textarea {
 .label{
   color:#0E86D4;
   font-weight:600;
-
 }
   `,
   ],
